@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="page">
+
+
+  <div class="gallery" aria-label="Cards">
+    <figure class="card" *ngFor="let c of cards">
+      <img [src]="c.src" [alt]="c.alt" loading="lazy">
+    </figure>
+  </div>
+
+
+  <div class="controls controls-bottom" role="toolbar" aria-label="Card actions">
+    <button type="button" class="btn" (click)="onSort()">Sort</button>
+    <button type="button" class="btn" (click)="onShuffle()">Shuffle</button>
+    <button type="button" class="btn" (click)="onReverse()">Reverse</button>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
